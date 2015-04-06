@@ -38,8 +38,11 @@
   </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h3>PURCHASE ORDER</h3>
+   
     <table style="width: 100%;">
+        <tr>
+            <td colspan="3"> <h3>PURCHASE ORDER</h3></td>
+        </tr>
         <tr>
             <td class="auto-style1">Purchase No.</td>
             <td class="auto-style2">:</td>

@@ -4,13 +4,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h3>Master Item List</h3>
+    <hr style="width:100%;border:dotted" />
     <div>
 
-        <asp:GridView ID="grd" runat="server" AutoGenerateColumns="False" style="font-size: small">
+        <asp:GridView ID="grd" runat="server" AutoGenerateColumns="False" style="font-size: small" AllowPaging="True" GridLines="Horizontal" BorderStyle="None">
             <Columns>
-                <asp:TemplateField HeaderText="ITEM CODE"></asp:TemplateField>
-                <asp:TemplateField HeaderText="ITEM NAME"></asp:TemplateField>
-                <asp:TemplateField HeaderText="DESC"></asp:TemplateField>
+                <asp:TemplateField HeaderText="ITEM CODE"><ItemTemplate><%# Eval("item_cd") %></ItemTemplate></asp:TemplateField>
+                <asp:TemplateField HeaderText="ITEM NAME"><ItemTemplate><%# Eval("item_nm") %></ItemTemplate></asp:TemplateField>
+                <asp:TemplateField HeaderText="DESC"><ItemTemplate><%# Eval("item_desc") %></ItemTemplate></asp:TemplateField>
                 <asp:TemplateField HeaderText="ITEM TYPE"></asp:TemplateField>
                 <asp:TemplateField HeaderText="SALES TAX OPT"></asp:TemplateField>
                 <asp:TemplateField HeaderText="SALES TAX"></asp:TemplateField>

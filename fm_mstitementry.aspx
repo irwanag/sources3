@@ -70,7 +70,7 @@
             <td class="auto-style2">Sales Tax Option</td>
             <td>:</td>
             <td>
-                <asp:DropDownList ID="cbosalestaxopt" runat="server" Height="16px" Width="216px">
+                <asp:DropDownList ID="cbsalestaxopt" runat="server" Height="16px" Width="216px">
                 </asp:DropDownList>
             </td>
         </tr>
@@ -98,6 +98,14 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style3">Purchase Tax</td>
+            <td class="auto-style1">:</td>
+            <td class="auto-style1">
+                <asp:DropDownList ID="cbpurchasetax" runat="server" Height="16px" Width="216px">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
             <td class="auto-style2">Payment Term</td>
             <td>:</td>
             <td>
@@ -109,7 +117,7 @@
             <td class="auto-style4">Item Code Vendor</td>
             <td class="auto-style5">:</td>
             <td class="auto-style5">
-                <asp:TextBox ID="txdesc0" runat="server" Width="215px"></asp:TextBox>
+                <asp:TextBox ID="txcodevendor" runat="server" Width="215px"></asp:TextBox>
             </td>
         </tr>
         <tr>
