@@ -12,6 +12,18 @@ using System.Net.Mail;
     {
         cdal dal = new cdal();
 
+        public void vDelTmpPoDtl(List<cArrayList> arr)
+        {
+            dal.vExecuteSP("sp_tmp_po_dtl_del", arr);
+        }
+        public void vInsertTmpPoDtl(List<cArrayList> arr)
+        {
+            dal.vExecuteSP("sp_tmp_po_dtl_ins", arr);
+        }
+        public void vSearchMstItem(List<cArrayList> arr , ref SqlDataReader rs)
+        {
+            dal.vGetRecordsetSP("sp_tmst_item_search", ref rs, arr);
+        }
         public void vInsertUserProfile(List<cArrayList> arr)
         {
             dal.vExecuteSP("sp_tuser_profile_ins", arr);
@@ -36,6 +48,16 @@ using System.Net.Mail;
         {
             SqlDataReader rs = null;
             dal.vGetRecordsetSP(sSPName, ref rs);
+            DataTable dta = new DataTable();
+            dta.Load(rs);
+            grd.DataSource = dta.DefaultView;
+            grd.DataBind();
+        }
+
+        public void vBindingGridToSp(ref GridView grd, string sSPName, List<cArrayList> arr)
+        {
+            SqlDataReader rs = null;
+            dal.vGetRecordsetSP(sSPName, ref rs, arr);
             DataTable dta = new DataTable();
             dta.Load(rs);
             grd.DataSource = dta.DefaultView;
