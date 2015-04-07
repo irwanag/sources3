@@ -13,6 +13,10 @@ public class creport
     cbll bll = new cbll();
     List<cArrayList> _lFormula;
     List<cArrayList> _lParameter;
+    string _reportname;
+
+    public string reportname
+    { set { _reportname = value; } get { return (_reportname); } }
 
     public List<cArrayList> lFormula
     { set { _lFormula = value; } get { return (_lFormula); } }
