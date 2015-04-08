@@ -27,7 +27,23 @@ public class cdal
         vPrepareParameter(ref cmd, arr);
         cmd.ExecuteNonQuery();
     }
-
+    public void vExecuteSP(string sSPName, List<cArrayList> arr, string paramout, ref string sOutValue)
+    {
+        SqlCommand cmd = new SqlCommand();
+        cmd.Connection = cd.getConnection();
+        cmd.CommandText = sSPName;
+        cmd.CommandType = CommandType.StoredProcedure;
+        SqlParameter oParam = new SqlParameter();
+        oParam.Direction = ParameterDirection.Output;
+        oParam.ParameterName = paramout;
+        oParam.Value = sOutValue;
+        oParam.SqlDbType = SqlDbType.VarChar;
+        oParam.Size = 50;
+        cmd.Parameters.Add(oParam);
+        vPrepareParameter(ref cmd, arr);
+        cmd.ExecuteNonQuery();
+        sOutValue = oParam.Value.ToString();
+    }
     public void vGetRecordsetSP(string sSPName, ref SqlDataReader rs, List<cArrayList> arr)
     {
         SqlCommand cmd = new SqlCommand();
