@@ -12,6 +12,18 @@ using System.Net.Mail;
     {
         cdal dal = new cdal();
 
+        public void vInsertPoDtl(List<cArrayList> arr)
+        {
+            dal.vExecuteSP("sp_tpo_dtl_ins", arr);
+        }
+        public void vGetMstPO(ref SqlDataReader rs)
+        {
+            dal.vGetRecordsetSP("sp_tmst_po_get", ref rs);
+        }
+        public void vInsertMstPO(List<cArrayList> arr, ref string sPoNO)
+        {
+            dal.vExecuteSP("sp_tmst_po_ins", arr,"@po_no", ref sPoNO);
+        }
         public void vDelTmpPoDtl(List<cArrayList> arr)
         {
             dal.vExecuteSP("sp_tmp_po_dtl_del", arr);
