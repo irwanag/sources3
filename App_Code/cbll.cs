@@ -12,6 +12,15 @@ using System.Net.Mail;
     {
         cdal dal = new cdal();
 
+        public double dSumOfPO()
+        {
+            double dTemp = 0;
+            SqlDataReader rs = null;
+            dal.vGetRecordsetSP("sp_gettotalpo", ref rs);
+            while (rs.Read())
+            {dTemp = Convert.ToDouble(rs["nSum"]);} rs.Close();
+            return (dTemp);
+        }
         public void vInsertPoDtl(List<cArrayList> arr)
         {
             dal.vExecuteSP("sp_tpo_dtl_ins", arr);
