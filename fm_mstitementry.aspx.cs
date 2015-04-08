@@ -22,6 +22,7 @@ public partial class fm_mstitementry : System.Web.UI.Page
             bll.vBindingFieldValueToCombo(ref cbpaymentterm, "payment_term");
             bll.vBindingFieldValueToCombo(ref cbpurchasetaxopt, "purchase_tax_opt");
             bll.vBindingFieldValueToCombo(ref cbpurchasetax, "purchase_tax");
+            bll.vBindingComboToSp(ref cbproduct, "sp_tmst_product_get", "prod_cd", "prod_nm");
         }
     }
     protected void btsave_Click(object sender, EventArgs e)
@@ -40,6 +41,7 @@ public partial class fm_mstitementry : System.Web.UI.Page
         arr.Add(new cArrayList("@payment_term", cbpaymentterm.SelectedValue.ToString()));
         arr.Add(new cArrayList("@item_cd_vendor", txcodevendor.Text));
         arr.Add(new cArrayList("@vendor_cd", cbvendor.SelectedValue.ToString()));
+        arr.Add(new cArrayList("@prod_cd", cbproduct.SelectedValue.ToString()));
         arr.Add(new cArrayList("@isactive", "1"));
         bll.vInsertMstItem(arr);
         Response.Redirect("fm_mstitemlist.aspx");
