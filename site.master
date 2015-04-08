@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="site" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -9,17 +11,10 @@
     <asp:ContentPlaceHolder id="head" runat="server">
        
     </asp:ContentPlaceHolder>
-     <script src="css/jquery-1.10.2.js"></script>
-     <script src="css/jquery-ui.js"></script>
-    <script src="css/jquery.min.js"></script>
-    <script src="css/jquery.datepick.js"></script>
-    <script src="css/jquery.plugin.js"></script>
-     <link href="css/jquery-ui.css" rel="stylesheet" />
-     <link href="css/styles.css" rel="stylesheet" />
-
-
+        <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body style="top:0px;left:0px;right:0px;font-family:Tahoma,Verdana;padding:0px;border-spacing:0px">
+    
     <table style="width:100%;text-align:center; height: 196px;" align="center">
         <tr>
         <td style="align-content:center">
@@ -34,9 +29,10 @@
     
       
     <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ScriptManagerTK" runat="server"></asp:ToolkitScriptManager>
     <table style="width:100%;background-color:#f5ecbd">
         <tr>
-            <td style="width:200px;vertical-align:top">
+            <td style="width:200px;vertical-align:top;height:100%;background-color:#f5ecbd">
             <div id='cssmenu'>
 <ul>
    <li style="border-bottom:1px solid gray"><a href='#'><span>HOME</span></a></li>
@@ -53,9 +49,10 @@
          </li>
       </ul>
    </li>
-   <li><a href='#'><span>Logistic</span></a>
+   <li style="border-bottom:1px solid gray"><a href='#'><span>Logistic</span></a>
         <ul>
-         <li class='has-sub' style="border-bottom:1px solid gray"><a href='fm_po.aspx'><span>Purchase Order</span></a>
+         <li class='has-sub' style="border-bottom:1px solid gray"><a href='fm_polist.aspx'><span>Purchase Order</span></a>
+         <li class='has-sub' style="border-bottom:1px solid gray"><a href='fm_dolist.aspx'><span>Delivery Order</span></a>
          </ul>
    </li>
    <li class='last'><a href='#'><span>Contact</span></a></li>
