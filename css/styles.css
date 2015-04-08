@@ -207,7 +207,13 @@ th {
             cursor:pointer;
             -webkit-border-radius: 5px;
             border-radius: 2px;*/ }
-  input [type="submit"] 
+input[type=text] {
+    font-family:Tahoma,Verdana;
+    font-size:small;
+    color:black;
+}
+
+input[type=submit]
     {
 	background: #FEDA71;
 	background: -moz-linear-gradient(top,#FEDA71 0%,#FEBB49 100%);
@@ -217,14 +223,19 @@ th {
 	background: -ms-linear-gradient(top,#FEDA71 0%,#FEBB49 100%);
 	background: linear-gradient(top,#FEDA71 0%,#FEBB49 100%);
 	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#FEDA71',endColorstr='#FEBB49',GradientType=0);
-	padding:8px 18px;
+	padding:1px  10px;
 	color:#623F1D;
 	font-family:'Helvetica Neue',sans-serif;
 	font-size:16px;
 	border-radius:48px;
 	-moz-border-radius:48px;
 	-webkit-border-radius:48px;
-	border:1px solid #623F1D
+	border:1px solid #623F1D;
 }         
+
+table {
+    font-family:Tahoma , Verdana;
+    font-size:small;
+    
 }
 

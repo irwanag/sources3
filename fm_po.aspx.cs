@@ -39,6 +39,7 @@ public partial class fm_po : System.Web.UI.Page
         arr.Add(new cArrayList("@unitprice", sUnitPrice));
         bll.vInsertTmpPoDtl(arr);
         bll.vBindingGridToSp(ref grdpo, "sp_tmp_po_dtl_get");
+        txsubtotal.Text = bll.dSumOfPO().ToString();
     }
     protected void grdpo_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
@@ -58,6 +59,7 @@ public partial class fm_po : System.Web.UI.Page
         arr.Add(new cArrayList("@ref", txref.Text));
         arr.Add(new cArrayList("@curr_cd", cbcurrency.SelectedValue.ToString()));
         arr.Add(new cArrayList("@vendor_cd", cbvendor.SelectedValue.ToString()));
+        arr.Add(new cArrayList("@remark", txremark.Text));
         bll.vInsertMstPO(arr, ref sPoNo);
         Response.Redirect("fm_polist.aspx");
     }

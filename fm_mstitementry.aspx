@@ -32,6 +32,13 @@
         .auto-style8 {
             height: 176px;
         }
+        .auto-style9 {
+            width: 40px;
+        }
+        .auto-style10 {
+            height: 20px;
+            width: 40px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -183,7 +190,7 @@
             <td class="auto-style8">
                 <table style="width:100%;">
                     <tr>
-                        <td>Branch</td>
+                        <td class="auto-style9">Branch</td>
                         <td>:</td>
                         <td class="auto-style6">
                             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
@@ -195,7 +202,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style5">Horeca</td>
+                        <td class="auto-style10">Horeca</td>
                         <td class="auto-style5">:</td>
                         <td class="auto-style7">
                             <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
@@ -207,7 +214,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Mini Market</td>
+                        <td class="auto-style9">Mini Market</td>
                         <td>:</td>
                         <td class="auto-style6">
                             <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
@@ -219,7 +226,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Retail Arab</td>
+                        <td class="auto-style9">Retail Arab</td>
                         <td>:</td>
                         <td class="auto-style6">
                             <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
@@ -231,7 +238,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Whole Saler</td>
+                        <td class="auto-style9">Whole Saler</td>
                         <td>:</td>
                         <td class="auto-style6">
                             <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
@@ -241,7 +248,7 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
+                        <td class="auto-style9">&nbsp;</td>
                         <td>&nbsp;</td>
                         <td class="auto-style6">
                             &nbsp;</td>

@@ -9,6 +9,9 @@ public partial class site : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            lbuser.Text = Request.Cookies["usr_id"].Value.ToString();
+        }
     }
 }

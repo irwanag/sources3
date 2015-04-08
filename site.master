@@ -21,14 +21,18 @@
         <table style="width:80%; height: 341px;" align="center">
             <tr>
                 <td>
-                    <asp:Panel ID="Panel1" runat="server" style="text-align: left">
-                        <img src="saidBawazir.jpg" />
-                        <div style="text-align:right;height:20px;background-color:#ffd800"> Welcome to SBTC Online, </div>
-                    </asp:Panel>
               
     
       
     <form id="form1" runat="server">
+                    <asp:Panel ID="Panel1" runat="server" style="text-align: left">
+                        <img src="saidBawazir.jpg" />
+                        <div style="text-align:right;height:20px;background-color:#ffd800"> Welcome to SBTC Online,<asp:Label ID="lbuser" runat="server"></asp:Label>
+&nbsp; </div>
+                    </asp:Panel>
+              
+    
+      
         <asp:ToolkitScriptManager ID="ScriptManagerTK" runat="server"></asp:ToolkitScriptManager>
     <table style="width:100%;background-color:#f5ecbd">
         <tr>
@@ -53,6 +57,9 @@
         <ul>
          <li class='has-sub' style="border-bottom:1px solid gray"><a href='fm_polist.aspx'><span>Purchase Order</span></a>
          <li class='has-sub' style="border-bottom:1px solid gray"><a href='fm_dolist.aspx'><span>Delivery Order</span></a>
+         <li class='has-sub' style="border-bottom:1px solid gray"><a href='fm_dolist.aspx'><span>Good Receipt</span></a>
+             <li class='has-sub' style="border-bottom:1px solid gray"><a href='fm_dolist.aspx'><span>Good Claim</span></a>
+                 <li class='has-sub' style="border-bottom:1px solid gray"><a href='fm_dolist.aspx'><span>Good Retur</span></a>
          </ul>
    </li>
    <li class='last'><a href='#'><span>Contact</span></a></li>
