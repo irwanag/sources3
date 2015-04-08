@@ -4,28 +4,26 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h3>Master Item List</h3>
-    <hr style="width:100%;border:dotted" />
+     <hr style="width:100%;border:dotted" />
+    <div style="width:100%;text-align:left;padding:5px 5px 5px 5px">Search : <asp:TextBox ID="txsearch" runat="server" Width="214px"></asp:TextBox><asp:Button ID="btsearch" runat="server" Text="Search" OnClick="btsearch_Click" /></div>
     <div>
 
-        <asp:GridView ID="grd" runat="server" AutoGenerateColumns="False" style="font-size: small" AllowPaging="True" GridLines="Horizontal" BorderStyle="None">
+        <asp:GridView ID="grd" runat="server" AutoGenerateColumns="False" style="font-size: small" AllowPaging="True" GridLines="Horizontal" BorderStyle="None" OnRowEditing="grd_RowEditing" OnPageIndexChanging="grd_PageIndexChanging">
             <Columns>
-                <asp:TemplateField HeaderText="ITEM CODE"><ItemTemplate><%# Eval("item_cd") %></ItemTemplate></asp:TemplateField>
+                <asp:TemplateField HeaderText="ITEM CODE">
+                    <ItemTemplate>
+                        <asp:Label ID="lbitemcode" runat="server" Text=' <%# Eval("item_cd") %>'></asp:Label></ItemTemplate></asp:TemplateField>
                 <asp:TemplateField HeaderText="ITEM NAME"><ItemTemplate><%# Eval("item_nm") %></ItemTemplate></asp:TemplateField>
                 <asp:TemplateField HeaderText="DESC"><ItemTemplate><%# Eval("item_desc") %></ItemTemplate></asp:TemplateField>
                 <asp:TemplateField HeaderText="ITEM TYPE"></asp:TemplateField>
-                <asp:TemplateField HeaderText="SALES TAX OPT"></asp:TemplateField>
-                <asp:TemplateField HeaderText="SALES TAX"></asp:TemplateField>
-                <asp:TemplateField HeaderText="INVOICE WITH TAX"></asp:TemplateField>
-                <asp:TemplateField HeaderText="PURCHASE TAX OPT"></asp:TemplateField>
-                <asp:TemplateField HeaderText="PURCHASE TAX"></asp:TemplateField>
-                <asp:TemplateField HeaderText="PAYMENT TERM"></asp:TemplateField>
                 <asp:TemplateField HeaderText="ITEM CODE VENDOR"></asp:TemplateField>
                 <asp:TemplateField HeaderText="VENDOR CODE"></asp:TemplateField>
                 <asp:CommandField HeaderText="ACTION" ShowEditButton="True" />
             </Columns>
         </asp:GridView>
     </div>
-    <div style="text-align: center">
-        <asp:Button ID="btadd" runat="server" Text="NEW ITEM" OnClick="btadd_Click" /></div>
+    <div style="text-align: center;padding-top:10px">
+        <asp:Button ID="btadd" runat="server" Text="NEW ITEM" OnClick="btadd_Click" />
+     <asp:Button ID="btprint" runat="server" Text="PRINT" /></div>
 </asp:Content>
 
